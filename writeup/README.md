@@ -148,8 +148,6 @@ public class ObjectServlet extends HttpServlet {
 
 Note that the HTTP request body part is deserialized in the `doPost` method of the `ObjectServlet` class, so there is a deserialization vulnerability.
 
-当初设计这个题目的时候，我为了保证题目难度，所以给整个反序列化过程设计了一个 `URLClassLoader`（即 `ObjectServlet` 的 `appClassLoader`），目的是将反序列化能够加载的类限制在 Java 标准库以及当前 webapp 范围内（`/WEB-INF/classes`, `/WEB-INF/lib/`），不让选手考虑 Tomcat 全局依赖库。`ClassLoaderObjectInputStream` 这个 `ObjectInputStream` 子类的设计目的也是如此：
-
 When designing this challenge, in order to ensure the difficulty, I designed a `URLClassLoader` (that is, the `appClassLoader` field of the `ObjectServlet` class) for the entire deserialization process. The purpose is to limit the classes that can be loaded by deserialization within the scope of the JRE standard library and the current webapp (`/WEB-INF/classes`, `/WEB-INF/lib/`), players are not allowed to consider Tomcat's global dependency library. The design purpose of the `ClassLoaderObjectInputStream` class is also the same:
 
 
@@ -212,7 +210,6 @@ For example, the version of the `commons-collections` library is 2.1
 ![](media/16103507126653.jpg)
 
 
-commons-collections 这个库的反序列化利用链核心都在于 `Transformer`，比如 `InvokerTransformer` 或者 `InstantiateTransformer`，但这些类在 2.1 版本的 commons-collections 库中都没有：
 
 The core of the `commons-collections` library's deserialization gadget chain lies in `Transformer`, such as `InvokerTransformer` or `InstantiateTransformer`, but these classes do not exist in the 2.1 version of the `commons-collections` library:
 

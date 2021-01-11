@@ -1,7 +1,6 @@
 # RealWolrdCTF 2021 Old System Writeup
 
 Author: Voidfyoo of Chaitin Tech
-Date: 2021/01/11
 
 ## Overview
 

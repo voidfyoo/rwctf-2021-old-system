@@ -1,5 +1,8 @@
 # RealWolrdCTF 2021 Old System Writeup
 
+Author: Voidfyoo of Chaitin Tech
+Date: 2021/01/11
+
 ## Overview
 
 In 2021 RealWolrdCTF (also referred to as RWCTF), I made a Java deserialization challenge named `Old System`. Players need to exploit the deserialization vulnerability in the environment of java 1.4.

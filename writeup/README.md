@@ -4,7 +4,7 @@ Author: Voidfyoo of Chaitin Tech
 
 ## Overview
 
-In 2021 RealWolrdCTF (also referred to as RWCTF), I made a Java deserialization challenge named `Old System`. Players need to exploit the deserialization vulnerability in the environment of java 1.4.
+In 2021 RealWorldCTF (also referred to as RWCTF), I made a Java deserialization challenge named `Old System`. Players need to exploit the deserialization vulnerability in the environment of java 1.4.
 
 You might think: "What? Java 1.4? This is too old, it's almost 20 years ago". In fact, this challenge is modified based on a real system I encountered in a penetration test last year. The key of this challenge is to examine the players' understanding of the Java deserialization exploit gadget chain and the ability to mine new gadget chains. If you are interested, please continue reading.
 
